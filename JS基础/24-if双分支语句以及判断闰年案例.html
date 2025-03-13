@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* 判断用户登录案例
+            需求：用户输入，用户名：pink，密码：123456， 则提示登录成功，否则提示登录失败
+            分析：
+            ①：弹出输入框，分别输入用户名和密码
+            ②：通过if语句判断，如果用户名是pink，并且密码是123456，则执行if里面的语句，否则执行else
+            里面的语句。 */
+
+    // let uname = prompt('请输入用户名：')
+
+    // let password = prompt('请输入密码：')
+    // if (uname === 'pink' && password === '123456') {
+    //   alert('登录成功')
+    // } else {
+    //   alert('登录失败，请重新登录')
+    // }
+
+
+    /* 判断闰年案例
+        需求：让用户输入年份，判断这一年是闰年还是平年并弹出对应的警示框
+        分析：
+        ①：能被4整除但不能被100整除，或者被400整除的年份是闰年，否则都是平年
+        ②：需要逻辑运算符 */
+
+    let year = +prompt('请输入年份：')
+    if (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0) {
+      alert(`${year}是闰年`)
+    } else {
+      alert(`${year}是平年`)
+    }
+  </script>
+</body>
+
+</html>
