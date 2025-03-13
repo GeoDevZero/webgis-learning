@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Map</title>
+  <!-- 引入OpenLayers样式文件 -->
+  <link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
+  <script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
+  <style>
+    .map {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="fullscreen" class="fullscreen">
+    <div id="map" class="map"></div>
+  </div>
+  <script>
+    let view = new ol.View({
+      center: [-27134284.06636128, 4846385.604799764],
+      zoom: 8
+    });
+    let map = new ol.Map({
+      layers: [
+        new ol.layer.Tile({
+          source: new ol.source.OSM()
+        })
+      ],
+      target: 'map',
+      view: view
+    });
+  </script>
+</body>
+
+</html>
