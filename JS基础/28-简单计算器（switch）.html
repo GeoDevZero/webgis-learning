@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 需求：用户输入2个数字，然后输入 + - * / 任何一个，可以计算结果
+        分析：
+        ①：用户输入数字
+        ②：用户输入不同算术运算符，可以去执行不同的运算 (switch) -->
+  <script>
+    let num1 = +prompt('请输入第一个数字：')
+    let num2 = +prompt('请输入第二个数字：')
+    let way = prompt('请输入 + - * / 任何一个，以计算结果：')
+    let num = 0
+
+    switch (way) {
+      case '+':
+        num = num1 + num2
+        break
+      case '-':
+        num = num1 - num2
+        break
+      case '*':
+        num = num1 * num2
+        break
+      case '/':
+        num = num1 / num2
+        break
+      default:
+        alert('请输入正确的符号！')
+    }
+    console.log(`两个数的加法操作是：${num}`);
+
+  </script>
+</body>
+
+</html>

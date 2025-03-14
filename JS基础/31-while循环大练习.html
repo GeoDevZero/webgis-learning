@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    /* 在页面中打印输出10句“月薪过万”
+    需求：使用while循环，页面中打印，可以添加换行效果*/
+
+    // let i = 1
+    // while (i <= 10) {
+    //   document.write('我要月薪过万！<br>')
+    //   i++
+    // }
+
+    /* 1. 页面输出1-100
+         核心思路： 利用 i ,因为正好和 数字对应 */
+
+    // let i = 1
+    // while (i <= 100) {
+    //   document.write(`这是第${i}个数<br>`)
+    //   i++
+    // }
+
+    /* 2. 计算从1加到100的总和并输出
+          核心思路：
+          声明累加和的变量 sum
+          每次把 i 加到 sum 里面 */
+
+    // let i = 1
+    // let sum = 0
+    // while (i <= 100) {
+    //   // sum = sum + i
+    //   sum += i
+    //   i++
+    // }
+    // document.write(sum)
+
+    /* 3. 计算1-100之间的所有偶数和
+          核心思路：
+          声明累加和的变量 sum
+          首先利用if语句把 i 里面是偶数筛选出来
+          把 筛选的 i 加到 sum 里面 */
+    let i = 1
+    let sum = 0
+    while (i <= 100) {
+      // 筛选偶数
+      if (i % 2 === 0) {
+        sum += i
+      }
+      // 每次循环都要自加，写在if中就是每次i+2
+      i++
+    }
+    document.write(sum)
+
+  </script>
+</body>
+
+</html>

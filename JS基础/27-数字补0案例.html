@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 数字补0案例
+  需求：用户输入1个数，如果数字小于10，则前面进行补0， 比如 09 03 等   -->
+  <script>
+    // 用户输入
+    let num = prompt('请输入一个数：')
+    // 与10进行比较并进行补0
+    // num >= 10 ? console.log(num) : console.log(Number(`0${num}`))
+    num = num >= 10 ? num : 0 + num
+    console.log(num);
+
+  </script>
+</body>
+
+</html>
