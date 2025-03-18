@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* 打印5行5列的星星
+          需求： 页面中打印出5行5列的星星
+          分析：
+          ①：利用双重for循环来做
+          ②：外层循环控制打印行，内层循环控制每行打印几个（列）
+          升级版本：
+          用户输入行数和列数，打印对应的星星！ */
+    // let row = +prompt('请输入行数：')
+    // let col = +prompt('请输入列数：')
+    // for (let i = 1; i <= row; i++) {
+
+    //   for (let j = 1; j <= col; j++) {
+    //     document.write(`￥`)
+    //   }
+    //   // 打印五个后再进行换行
+    //   document.write(`<br>`)
+    // }
+
+    /* 打印倒三角形星星
+          需求：如图所示
+          分析：
+          ①：利用双重for循环来做
+          ②：外层循环控制打印行，内层循环控制每行打印几个（列）
+          ③：内层循环的个数跟第几行是一一对应的 */
+    let row = +prompt('请输入行数：')
+    let col = +prompt('请输入列数：')
+    for (let i = 1; i <= row; i++) {
+      for (let j = 1; j <= col; j++) {
+        if (j <= i) {
+          document.write('￥')
+        }
+      }
+      // for (let j = 1; j <= i; j++) {
+      //   document.write('￥')
+      // }
+      document.write(`<br>`)
+
+    }
+  </script>
+</body>
+
+</html>
