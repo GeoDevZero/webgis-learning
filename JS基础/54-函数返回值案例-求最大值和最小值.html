@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    // 1.求任意两个数的最大值并返回
+    // function getMax(x, y) {
+    //   return x > y ? x : y
+    // }
+    // let max = getMax(1, 2222)
+    // console.log(max);
+
+    // 1. 求任意数组中的最大值并返回这个最大值
+    function getArrMax(arr = []) {
+      let max = arr[0]
+      for (let i = 0; i < arr.length; i++) {
+        if (max < arr[i]) {
+          max = arr[i]
+        }
+        // 在循环中用return会直接结束循环
+      }
+      return max
+    }
+    let re = getArrMax([2, 4, 3, 3, 34, 5, 52, 6, 7, 73, 32, 0])
+    console.log(re);
+
+  </script>
+</body>
+
+</html>
