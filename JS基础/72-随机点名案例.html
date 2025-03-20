@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 随机点名案例
+      需求：请把 ['蔡徐坤','陈立农','范丞丞','黄明昊','林彦俊','朱正廷','王子异','王琳凯','尤长靖'] 随机显示一个名字到页面中
+      分析：
+      ①：利用随机函数随机生成一个数字作为索引号
+      ②： 数组[随机数] 生成到页面中 -->
+  <script>
+    let arr = ['蔡徐坤', '陈立农', '范丞丞', '黄明昊', '林彦俊', '朱正廷', '王子异', '王琳凯', '尤长靖']
+    let radom = Math.floor(Math.random() * arr.length)
+    document.write(arr[radom])
+
+    /* 随机点名案例改进
+      需求：请把 ['蔡徐坤', '陈立农', '范丞丞', '黄明昊', '林彦俊', '朱正廷', '王子异', '王琳凯', '尤长靖']
+       随机显示一个名字到页面中，但是不允许重复显示
+      分析：
+      ①：利用随机函数随机生成一个数字作为索引号
+      ②：数组[随机数] 生成到页面中
+      ③：数组中删除刚才抽中的索引号 */
+
+    // spalice(起始位置(下标) , 删除几个元素)
+    arr.splice(radom, 1)
+    console.log(arr)
+
+  </script>
+</body>
+
+</html>

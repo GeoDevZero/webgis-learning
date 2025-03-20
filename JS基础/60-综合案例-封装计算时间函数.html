@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 转换时间案例
+        需求： 用户输入秒数，可以自动转换为时分秒
+        分析：
+        ①： 用户输入总秒数 （注意默认值）
+        ②：计算时分秒（封装函数） 里面包含数字补0
+        ③：打印输出 -->
+  <script>
+    /* 计算公式：计算时分秒
+      小时： h = parseInt(总秒数 / 60 / 60 % 24)
+      分钟： m = parseInt(总秒数 / 60 % 60 )
+      秒数: s = parseInt(总秒数 % 60) */
+    let allSecond = +prompt(`请输入秒数：`)
+    // 封装函数以随时调用 
+    function getTime(t) {
+      let hour = parseInt(t / 60 / 60 % 24)
+      // 补零后要重新赋值
+      hour = hour >= 10 ? hour : '0' + hour
+
+      let min = parseInt(t / 60 % 60)
+      min = min >= 10 ? min : '0' + min
+
+      let second = parseInt(t % 60)
+      second = second >= 10 ? second : '0' + second
+
+      return `${t}转换为时分秒为${hour}时${min}分${second}秒`
+
+    }
+    let re = getTime(allSecond)
+    document.write(re
+
+    )
+  </script>
+
+</body>
+
+</html>
